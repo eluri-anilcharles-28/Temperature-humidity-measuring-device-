@@ -1,5 +1,5 @@
 #Simple Weather Station
-// By using arduino uno r3 , JHD 162A lcd display and DHT11 sensor i built a temperature and humidity measuring  device 
+// By using ARDUINO UNO R3 , JHD 162A LCD DISPLAY and DHT11 SENSOR, i built this and made the entire program by myself 
 // By E.ANIL CHARLES
 
 #include<LiquidCrystal_I2C.h>
