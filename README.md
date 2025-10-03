@@ -1,4 +1,4 @@
-#Simple Weather Station
+# Simple Weather Station
 // By using ARDUINO UNO R3 , JHD 162A LCD DISPLAY and DHT11 SENSOR, i built this and made the entire program by myself 
 // By E.ANIL CHARLES
 
