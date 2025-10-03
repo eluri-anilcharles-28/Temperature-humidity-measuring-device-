@@ -1,4 +1,4 @@
-# Temperature-humidity-measuring-device-
+#Simple Weather Station
 // By using arduino uno r3 , JHD 162A lcd display and DHT11 sensor i built a temperature and humidity measuring  device 
 // By E.ANIL CHARLES
 
