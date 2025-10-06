@@ -1,63 +1,27 @@
-# Simple Weather Station
-// By using ARDUINO UNO R3 , JHD 162A LCD DISPLAY and DHT11 SENSOR, i built this and made the entire program by myself 
-// By E.ANIL CHARLES
+# Temperature and Humidity Measuring Device 🌡️💧
+### Overview
+A simple environmental monitoring system that measures real-time temperature and humidity levels using the **DHT11 sensor**.  
+The readings are displayed on a **16x2 LCD screen**. Built using **Arduino UNO R3**.  
+All programming and circuit design were done by myself (E.ANIL CHARLES).
 
-#include<LiquidCrystal_I2C.h>
-#include<DHT.h>
+### Components Used
+- Arduino UNO R3  
+- DHT11 Temperature & Humidity Sensor  
+- 16x2 JHD LCD Display  
+- Breadboard, Jumper Wires  
 
-#define DHT_PIN 2
-#define DHTTYPE DHT11
+### Features
+- Real-time temperature and humidity display  
+- Continuous sensor reading with stable output  
+- Simple, low-cost monitoring system  
 
-DHT dht(DHT_PIN,DHTTYPE);
-LiquidCrystal_I2C lcd(0x27, 16, 2);
+### Skills Demonstrated
+C Programming | Sensor Interfacing | LCD Control | Analog-Digital Data Processing  
 
-void setup() {
-  Serial.begin(9600);
-  lcd.init();
-  lcd.backlight();
-  lcd.begin(16, 2);
+### Future Enhancements
+- Add Wi-Fi module (ESP8266 or ESP32) for IoT logging  
+- Integrate with cloud dashboard (Thingspeak/Blynk)  
+- Add data storage with SD card module  
 
-  dht.begin();
-
-  lcd.setCursor(0, 0);
-  lcd.print("DHT IS READY!");
-  delay(3000);
-  lcd.clear();
-
-  lcd.setCursor(0,0);
-  lcd.print("INITIALIZING...");
-  delay(2000);
-
-  lcd.clear();
-  lcd.print("READING....");
-  delay(2000);
-  lcd.clear();
-}
-
-void loop() {
-  delay(2000);
- 
-  float h = dht.readHumidity();
-  float t = dht.readTemperature();
-
-  if (isnan(h) || isnan(t)) {
-    lcd.clear();
-    lcd.setCursor(0, 0);
-    lcd.print("Sensor Error");
-  } else 
-  {
-   lcd.setCursor(0, 0);
-   lcd.print("HUMIDITY: ");
-   lcd.print(h, 1);
-   lcd.print(" %");
-   lcd.setCursor(0, 1);
-   lcd.print("TEMP: ");
-   lcd.print(t, 1);
-   lcd.print(" C");
-   delay(10000);
-   lcd.clear();
-  }
-} 
-
-
-
+### Author
+Developed by E.ANIL CHARLES
